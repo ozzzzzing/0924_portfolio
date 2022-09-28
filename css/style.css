@@ -78,9 +78,6 @@ body{
     background: url("../images/main_image.jpg") center;
     background-size: cover;
 }
-#main_image span{
-    display: none;
-}
 video{
     display: none;
 }
@@ -91,11 +88,6 @@ video{
     color:#fff;
     /* font-size: 1.7rem; */
     text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-}
-/* 섹션 공통 스타일 적용 */
-/* 공통 위아래 여백 */
-.section{
-    margin: 170px 0;
 }
 /* 폰트 스타일 */
 .section_title h2{
@@ -120,7 +112,7 @@ video{
 }
 #about1{
     margin: 0 auto;
-    width: 480px;
+    width: 320px;
 }
 #about .highlight{
     box-shadow: inset 0 -19px 0 #ad7d88ad; 
@@ -257,7 +249,7 @@ video{
 }
 /* projects */
 #projects{
-    height: 1750px;
+    height: 1600px;
     /* border: 1px solid red; */
 }
 .tab_menu{
@@ -329,7 +321,7 @@ video{
 .tab_text_num{
     display: flex;
     margin-left: 10px;
-    font-size: 1em;
+    font-size: 15px;
     color:#A8A8A8;
     margin-top: 40px;
 }
@@ -342,8 +334,8 @@ video{
     color:#000;
 }
 .tab_img{
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 200px;
     /* background-color: #fff; */
     /* background: url("../images/team1.jpg") center;
     background-size: cover; */
@@ -352,16 +344,10 @@ video{
     overflow: hidden;
 }
 .tab_img img{
-    transition: all 0.4s linear;
-}
-.tab_img:hover img{
-    transform: scale(1.5) translate(0, 14.5px);
-    overflow: hidden;
-}
-.tab_img img{
     width: 260px;
-    height: 240px;
+    scale: 1.2;
     overflow: hidden;
+    height: auto;
 }
 /* 탭 메뉴 버튼  */
 .tab_button{
@@ -369,7 +355,7 @@ video{
     justify-content: space-between;
     width: 260px;
     margin: 0 auto;
-    margin-top: -30px;
+    margin-top: 10px;
 }
 .tab_button button:nth-child(1){
     width: 180px;
@@ -381,7 +367,6 @@ video{
 }
 .tab_button button:nth-child(1) a{
     color:#fff;
-    /* padding: 18px 125px; */
 }
 .tab_button button:nth-child(2){
     width: 70px;
@@ -408,6 +393,10 @@ video{
     color:rgb(47, 65, 33);
     transition: 0.2s;
 }
+.tab_but_but a{
+    /* border: 1px solid red; */
+    padding: 18px 70px;
+}
 /* 페이지 수 다른 프로젝트 버튼 */
 /* 지역축제 */
 #festival_but .but {
@@ -415,7 +404,7 @@ video{
     height: 60px;
     background-color: #ADC2A9;
     border:none;
-    font-size: 1.12em;
+    font-size: 1.2em;
     font-weight: bold;
     display: block;
 }
@@ -537,7 +526,7 @@ video{
     margin: 0 auto;
 }
 #contact_contents p:nth-child(2){
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: bold;
     margin-top: 30px;
 }
@@ -569,6 +558,9 @@ footer p{
     display: none;
 }
 @media screen and (min-width:480px){
+    #about1{
+        width: 480px;
+    }
     #about1_1{
         width: 220px;
         height: 300px;
@@ -592,6 +584,7 @@ footer p{
     /* 스킬 이미지 박스 */
     #skills_area{
         width: 480px;
+        height: 800px;
     }
     .skills_box{
         width: 230px;
@@ -606,16 +599,8 @@ footer p{
     }
     .skills_box:nth-child(1){
         margin-left: 20px;
-        /* background: url("../images/skills_1.png") center; */
-        /* background-repeat: no-repeat; */
-        /* background-size: cover; */
-        /* border: 30px solid #E6DDC6; */
         background: #E6DDC6;
     }
-    /* .skills_box:nth-child(1):hover{
-        background: rgb(0, 0, 0);
-        border: 30px solid #000;
-    } */
     .skills_box:nth-child(2){
         position: absolute;
         right: 15px;
@@ -647,247 +632,253 @@ footer p{
         background: #99A799;
     }
     /* projects */
-#projects{
-    height: 2050px;
-    /* border: 1px solid red; */
-}
-.tab_menu{
-    position:relative;
-    /* width: 100%; */
-    margin: 20px;
-    margin-top: 50px;
-    font-family: 'GmarketSansMedium';
-    font-style: normal;
-    height: auto;
-}
-.tab_menu .list{
-    overflow:hidden;
-}
-.tab_menu .list li{
-    float:left; 
-    text-align: center;
-    /* margin-right:14px; */
-    width: 140px;
-    height: 30px;
-    line-height: 30px;
-    background: #537062;
-    border-radius: 50px 50px 0 0 ;
-}
-.tab_menu .list li:nth-of-type(1){
-    width: 110px;
-}
-.tab_menu .list li:nth-of-type(2){
-    background-color: #8DAB9E;
-}
-.tab_menu .list li:nth-of-type(3){
-    background-color: #537062;
-    width: 120px;
-}
-.tab_menu .list .btn{
-    font-size:1.2em;
-    color: white;    
-}
-.cont_flex_wrap{
-    display: flex;
-    flex-wrap: wrap;
-}
-.tab_menu .list .cont{
-    display:none; 
-    position:absolute; 
-    background:#EBEBF0; 
-    color:#fff; 
-    text-align:center; 
-    width:100%; 
-    height:auto; 
-    left: 0;
-    top:30px;
-    padding-bottom: 40px;
-}
+    #projects{
+        height: 2050px;
+        /* border: 1px solid red; */
+    }
+    .tab_menu{
+        position:relative;
+        /* width: 100%; */
+        margin: 20px;
+        margin-top: 50px;
+        font-family: 'GmarketSansMedium';
+        font-style: normal;
+        font-size: 18px;
+        height: auto;
+    }
+    .tab_menu .list{
+        overflow:hidden;
+    }
+    .tab_menu .list li{
+        float:left; 
+        text-align: center;
+        /* margin-right:14px; */
+        width: 140px;
+        height: 30px;
+        line-height: 30px;
+        background: #537062;
+        border-radius: 50px 50px 0 0 ;
+    }
+    .tab_menu .list li:nth-of-type(1){
+        width: 110px;
+    }
+    .tab_menu .list li:nth-of-type(2){
+        background-color: #8DAB9E;
+    }
+    .tab_menu .list li:nth-of-type(3){
+        background-color: #537062;
+        width: 120px;
+    }
+    .tab_menu .list .btn{
+        font-size:1.1em;
+        color: white;    
+    }
+    .cont_flex_wrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tab_menu .list .cont{
+        display:none; 
+        position:absolute; 
+        background:#EBEBF0; 
+        color:#fff; 
+        text-align:center; 
+        width:100%; 
+        height:auto; 
+        left: 0;
+        top:30px;
+        padding-bottom: 40px;
+    }
 
-.tab_conbox{
-    /* border: 1px solid green; */
-    width: 400px;
-    margin: 0 auto;
-}
-.tab_menu .list li.is_on .btn{
-    font-weight:bold; 
-    color:black;
-}
-.tab_menu .list li.is_on .cont{
-    display:block;
-}
-.tab_text_num{
-    display: flex;
-    margin-left: 10px;
-    font-size: 1.2em;
-    color:#A8A8A8;
-    margin-top: 50px;
-}
-.tab_text_num h2:nth-child(2){
-    color:#4A4A4A;
-}
-.tab_text_num h4{
-    padding-top: 3px;
-    padding-left: 10px;
-    color:#000;
-}
-.tab_img{
-    width: 380px;
-    height: 300px;
-    /* background-color: #fff; */
-    /* background: url("../images/team1.jpg") center;
-    background-size: cover; */
-    margin: 0 auto;
-    margin-top: 10px;
-    overflow: hidden;
-}
-.tab_img img{
-    transition: all 0.4s linear;
-}
-.tab_img:hover img{
-    transform: scale(1.5) translate(0, 14.5px);
-    overflow: hidden;
-}
-.tab_img img{
-    width: 380px;
-    height: 300px;
-    overflow: hidden;
-}
-/* 탭 메뉴 버튼  */
-.tab_button{
-    display: flex;
-    justify-content: space-between;
-    width: 380px;
-    margin: 0 auto;
-    margin-top: 10px;
-}
-.tab_button button:nth-child(1){
-    width: 300px;
-    height: 60px;
-    background-color: #ADC2A9;
-    border:none;
-    font-size: 1.3em;
-    font-weight: bold;
-}
-.tab_button button:nth-child(1) a{
-    color:#fff;
-    /* padding: 18px 125px; */
-}
-.tab_button button:nth-child(2){
-    width: 70px;
-    height: 60px;
-    text-align: center;
-    background-color: #dacec8;
-    border:none;
-    display: flex;
-    justify-content:center;
-}
-.tab_button button:nth-child(2) a{
-    height: 60px;
-    padding: 20px 22px;
-}
-.tab_button button:nth-child(2):hover{
-    background-color: #c4b4ac;
-    transition: 0.2s;
-}
-.tab_button button:nth-child(1):hover{
-    background-color: #9dac97;
-    transition: 0.2s;
-}
-.tab_button button:nth-child(1):hover a{
-    color:rgb(47, 65, 33);
-    transition: 0.2s;
-}
-/* 페이지 수 다른 프로젝트 버튼 */
-/* 지역축제 */
-#festival_but .but {
-    width: 95px;
-    height: 60px;
-    background-color: #ADC2A9;
-    border:none;
-    font-size: 1.3em;
-    font-weight: bold;
-    display: block;
-}
-#festival_but .but a{
-    color:#fff;
-    padding: 17px 20px;
-}
-#festival_but button:nth-child(4){
-    width: 70px;
-    height: 60px;
-    text-align: center;
-    background-color: #dacec8;
-    border:none;
-    display: flex;
-    justify-content:center;
-}
-#festival_but button:nth-child(4) a{
-    height: 60px;
-    padding: 20px 22px;
-}
-#festival_but button:nth-child(4):hover{
-    background-color: #c4b4ac;
-    transition: 0.2s;
-}
-#festival_but .but:hover{
-    background-color: #9dac97;
-    transition: 0.2s;
-}
-#festival_but .but:hover a{
-    color:rgb(47, 65, 33);
-    transition: 0.2s;
-}
-/* 영진리지다인 버튼 */
-#youngjin_but .but {
-    width: 145px;
-    height: 60px;
-    background-color: #ADC2A9;
-    border:none;
-    font-size: 1.3em;
-    font-weight: bold;
-}
-#youngjin_but .but a{
-    color:#fff;
-    padding: 0;
-    display: block;
-    line-height: 60px;
-}
-#youngjin_but .but:nth-child(2) a{
-    padding: 0 50px;
-}
-#youngjin_but button:nth-child(3){
-    width: 70px;
-    height: 60px;
-    text-align: center;
-    background-color: #dacec8;
-    border:none;
-    display: flex;
-    justify-content:center;
-}
-#youngjin_but button:nth-child(3) a{
-    height: 60px;
-    padding: 20px 22px;
-}
-#youngjin_but button:nth-child(3):hover{
-    background-color: #c4b4ac;
-    transition: 0.2s;
-}
-#youngjin_but .but:hover{
-    background-color: #9dac97;
-    transition: 0.2s;
-}
-#youngjin_but .but:hover a{
-    color:rgb(47, 65, 33);
-    transition: 0.2s;
-}
-/* others버튼 */
-#others button{
-    width: 400px;
-}
-#others button a{
-    padding: 18px 165px;
-}
+    .tab_conbox{
+        /* border: 1px solid green; */
+        width: 400px;
+        margin: 0 auto;
+    }
+    .tab_menu .list li.is_on .btn{
+        font-weight:bold; 
+        color:black;
+    }
+    .tab_menu .list li.is_on .cont{
+        display:block;
+    }
+    .tab_text_num{
+        display: flex;
+        margin-left: 10px;
+        font-size: 1.2em;
+        color:#A8A8A8;
+        margin-top: 50px;
+    }
+    .tab_text_num h2:nth-child(2){
+        color:#4A4A4A;
+    }
+    .tab_text_num h4{
+        padding-top: 3px;
+        padding-left: 10px;
+        color:#000;
+    }
+    .tab_img{
+        width: 380px;
+        height: 300px;
+        /* background-color: #fff; */
+        /* background: url("../images/team1.jpg") center;
+        background-size: cover; */
+        margin: 0 auto;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+    .tab_img img{
+        transition: all 0.4s linear;
+    }
+    .tab_img:hover img{
+        transform: scale(1.5) translate(0, 14.5px);
+        overflow: hidden;
+    }
+    .tab_img img{
+        width: 380px;
+        height: 300px;
+        scale:1;
+        overflow: hidden;
+    }
+    /* 탭 메뉴 버튼  */
+    .tab_button{
+        display: flex;
+        justify-content: space-between;
+        width: 380px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    .tab_button button:nth-child(1){
+        width: 300px;
+        height: 60px;
+        background-color: #ADC2A9;
+        border:none;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .tab_button button:nth-child(1) a{
+        color:#fff;
+        /* border: 1px solid red; */
+        padding: 17px 125px;
+    }
+    .tab_button button:nth-child(2){
+        width: 70px;
+        height: 60px;
+        text-align: center;
+        background-color: #dacec8;
+        border:none;
+        display: flex;
+        justify-content:center;
+    }
+    .tab_button button:nth-child(2) a{
+        height: 60px;
+        padding: 20px 22px;
+    }
+    .tab_button button:nth-child(2):hover{
+        background-color: #c4b4ac;
+        transition: 0.2s;
+    }
+    .tab_button button:nth-child(1):hover{
+        background-color: #9dac97;
+        transition: 0.2s;
+    }
+    .tab_button button:nth-child(1):hover a{
+        color:rgb(47, 65, 33);
+        transition: 0.2s;
+    }
+    /* 페이지 수 다른 프로젝트 버튼 */
+    /* 지역축제 */
+    #festival_but .but {
+        width: 95px;
+        height: 60px;
+        background-color: #ADC2A9;
+        border:none;
+        font-size: 1.2em;
+        font-weight: bold;
+        display: block;
+    }
+    #festival_but .but a{
+        color:#fff;
+        padding: 17px 20px;
+    }
+    #festival_but button:nth-child(4){
+        width: 70px;
+        height: 60px;
+        text-align: center;
+        background-color: #dacec8;
+        border:none;
+        display: flex;
+        justify-content:center;
+    }
+    #festival_but button:nth-child(4) a{
+        height: 60px;
+        padding: 20px 22px;
+    }
+    #festival_but button:nth-child(4):hover{
+        background-color: #c4b4ac;
+        transition: 0.2s;
+    }
+    #festival_but .but:hover{
+        background-color: #9dac97;
+        transition: 0.2s;
+    }
+    #festival_but .but:hover a{
+        color:rgb(47, 65, 33);
+        transition: 0.2s;
+    }
+    /* 영진리지다인 버튼 */
+    #youngjin_but .but {
+        width: 145px;
+        height: 60px;
+        background-color: #ADC2A9;
+        border:none;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    #youngjin_but .but a{
+        color:#fff;
+        padding: 0;
+        display: block;
+        line-height: 60px;
+    }
+    #youngjin_but .but:nth-child(2) a{
+        padding: 0 50px;
+    }
+    #youngjin_but button:nth-child(3){
+        width: 70px;
+        height: 60px;
+        text-align: center;
+        background-color: #dacec8;
+        border:none;
+        display: flex;
+        justify-content:center;
+    }
+    #youngjin_but button:nth-child(3) a{
+        height: 60px;
+        padding: 20px 22px;
+    }
+    #youngjin_but button:nth-child(3):hover{
+        background-color: #c4b4ac;
+        transition: 0.2s;
+    }
+    #youngjin_but .but:hover{
+        background-color: #9dac97;
+        transition: 0.2s;
+    }
+    #youngjin_but .but:hover a{
+        color:rgb(47, 65, 33);
+        transition: 0.2s;
+    }
+    /* others버튼 */
+    #others button{
+        width: 400px;
+    }
+    #others button a{
+        padding: 18px 165px;
+    }
+    #contact_contents p:nth-child(2){
+        font-size: 1.3em;
+    }
 }
 /* 태블릿용 */
 @media screen and (min-width:764px) {
@@ -1179,9 +1170,6 @@ footer p{
     #main_image{
         background: none;
     }
-    #main_image span{
-        display: block;
-    }
     video{
         display: block;
         width: 100%;
@@ -1295,9 +1283,6 @@ footer p{
     #about{
         margin-top: 70vh;
     }
-    .section_box{
-        /* border: 1px solid red; */
-    }
     #about_title{
         height: 55px;
     }
@@ -1310,9 +1295,10 @@ footer p{
      /* projects */
      #projects{
         max-width: 1300px;
-        height: 1400px;
+        height: 1310px;
         display: block;
-        padding-top: 2vh;
+        padding-top:10vh;
+        margin-top: 4vh;
         /* border: 1px solid red; */
     }
     #projects_title{
@@ -1379,9 +1365,9 @@ footer p{
     #main_image h2{
         /* border: 1px solid blue; */
         /* margin-top: 220px; */
-        line-height:40px;
+        line-height:26px;
         /* margin-top: 420px; */
-        margin-top: 40vh;
+        margin-top: 43vh;
         color: #000;
         text-shadow: none;
         font-size: 1.5em;
@@ -1393,7 +1379,7 @@ footer p{
     /* Contact */
     #contact_title{
         margin: 0;
-        margin-top: 10vh;
+        margin-top: 4vh;
     }
     #contact_title h2{
         margin: 0;
@@ -1410,6 +1396,9 @@ footer p{
     #contact_contents p:nth-of-type(1){
         width: 600px;
         margin-top: 70px;
+    }
+    footer{
+        margin-top: -10px;
     }
     /* 탑 버튼 */
     #top_btn{
@@ -1444,21 +1433,19 @@ footer p{
           border-color: transparent
         }
       }
-      /* 푸터 */
-      footer{
-        /* margin-top: 0vh; */
-      }
     }
     @media screen and (min-width:1400px){
         #about{
-            background: url("../images/about_bg.png") 50% -20%;
-            background-size: cover;
+            background: url("../images/about_bg2.png") center;
+            background-repeat: no-repeat;
+            /* background-size: cover; */
             /* border: 1px solid red; */
         }
         #about1_text{
             background-color: #eeeeee77;
             border: none;
         }
+
     }
     @media screen and (min-width:1600px) {
         #PC_menu ul{
